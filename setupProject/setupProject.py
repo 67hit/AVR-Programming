@@ -36,6 +36,6 @@ def copyToNewDirectory(whichFile, newDirectory):
 for filename in ["Makefile", "main.c", "main.h", "USART.h", "USART.c", "macros.h"]:
     copyToNewDirectory(filename, relativeDirectory)
 
-print "Copied Makefile, main.c, and main.h into %s." % relativeDirectory
-print "Time to start coding."
+print("Copied Makefile, main.c, and main.h into %s." % relativeDirectory)
+print("Time to start coding.")
 
