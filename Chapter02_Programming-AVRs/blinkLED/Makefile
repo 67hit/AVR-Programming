@@ -22,7 +22,7 @@ LIBDIR = ../../AVR-Programming-Library
 
 PROGRAMMER_TYPE = usbtiny
 # extra arguments to avrdude: baud rate, chip type, -F flag, etc.
-PROGRAMMER_ARGS = 	
+PROGRAMMER_ARGS =
 
 ##########------------------------------------------------------##########
 ##########                  Program Locations                   ##########
@@ -157,6 +157,10 @@ flash_arduinoISP: flash
 flash_109: PROGRAMMER_TYPE = avr109
 flash_109: PROGRAMMER_ARGS = -b 9600 -P /dev/ttyUSB0
 flash_109: flash
+
+flash_mine: PROGRAMMER_TYPE = stk500v2
+flash_mine: PROGRAMMER_ARGS = -P /dev/cu.usbmodem004226102
+flash_mine: flash
 
 ##########------------------------------------------------------##########
 ##########       Fuse settings and suitable defaults            ##########
