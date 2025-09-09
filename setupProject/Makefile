@@ -1,18 +1,19 @@
+## A directory for common include files and the simple USART library.
+## If you move either the current folder or the Library folder, you'll 
+##  need to change this path to match.
+LIBDIR = ../../AVR-Programming-Library
+
+include $(LIBDIR)/common.mk
 
 ##########------------------------------------------------------##########
 ##########              Project-specific Details                ##########
 ##########    Check these every time you start a new project    ##########
 ##########------------------------------------------------------##########
 
-MCU   = atmega168p
-F_CPU = 8000000UL  
+MCU   ?= atmega168p
+F_CPU ?= 1000000UL  
 BAUD  = 9600UL
 ## Also try BAUD = 19200 or 38400 if you're feeling lucky.
-
-## A directory for common include files and the simple USART library.
-## If you move either the current folder or the Library folder, you'll 
-##  need to change this path to match.
-LIBDIR = ../../AVR-Programming-Library
 
 ##########------------------------------------------------------##########
 ##########                 Programmer Defaults                  ##########
@@ -20,9 +21,9 @@ LIBDIR = ../../AVR-Programming-Library
 ##########        (Can override.  See bottom of file.)          ##########
 ##########------------------------------------------------------##########
 
-PROGRAMMER_TYPE = usbtiny
+PROGRAMMER_TYPE ?= usbtiny
 # extra arguments to avrdude: baud rate, chip type, -F flag, etc.
-PROGRAMMER_ARGS = 	
+PROGRAMMER_ARGS ?= 	
 
 ##########------------------------------------------------------##########
 ##########                  Program Locations                   ##########
