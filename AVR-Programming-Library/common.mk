@@ -7,5 +7,5 @@ ifeq ($(SYSTEM),Linux)
 PROGRAMMER_ARGS = -P /dev/ttyACM0
 endif
 ifeq ($(SYSTEM),Darwin)
-PROGRAMMER_ARGS = -P /dev/ttyACM0
+PROGRAMMER_ARGS = -P /dev/cu.usbmodem004226102
 endif

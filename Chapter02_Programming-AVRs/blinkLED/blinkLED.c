@@ -1,6 +1,8 @@
                                                        /* Blinker Demo */
 
+#ifndef __AVR_ATmega168P__
 #define __AVR_ATmega168P__
+#endif
 
 // ------- Preamble -------- //
 #include <avr/io.h>                        /* Defines pins, ports, etc */
