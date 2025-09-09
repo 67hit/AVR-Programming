@@ -1,9 +1,11 @@
 MCU   = atmega168p
 PROGRAMMER_TYPE = stk500v2
 
-ifeq($(uname),Linux)
+SYSTEM = $(shell uname)
+
+ifeq ($(SYSTEM),Linux)
 PROGRAMMER_ARGS = -P /dev/ttyACM0
 endif
-ifeq($(uname),Darwin)
+ifeq ($(SYSTEM),Darwin)
 PROGRAMMER_ARGS = -P /dev/ttyACM0
 endif
