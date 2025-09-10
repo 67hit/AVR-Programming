@@ -4,8 +4,6 @@
    cylonity.
 */
 
-#define __AVR_ATmega168P__
-
 // ------- Preamble -------- //
 #include <avr/io.h>                        /* Defines pins, ports, etc */
 #include <util/delay.h>                     /* Functions to waste time */
