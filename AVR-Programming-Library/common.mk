@@ -1,4 +1,6 @@
 MCU   = atmega168p
+F_CPU = 1000000UL
+
 PROGRAMMER_TYPE = stk500v2
 
 SYSTEM = $(shell uname)
